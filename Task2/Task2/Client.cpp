@@ -28,7 +28,6 @@ int Client::Run() {
 
 	int byteCount = 0;
 	while (true) {
-		Sleep(1000);
 		this->SocketReceiver<SERVICEPARAMS>(serviceParams, (SOCKET)clientSocket, byteCount);
 	}
 
@@ -58,7 +57,7 @@ DWORD WINAPI Client::ClientThreadSender(void* param) {
 
 	try {
 		while (shouldRun) {
-			Sleep(1000);
+			Sleep(500);
 			if (socket != INVALID_SOCKET) {
 				byteCount = send(socket, (char *)&client, sizeof(Client), 0);
 				if (byteCount == SOCKET_ERROR) {

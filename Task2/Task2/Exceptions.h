@@ -22,7 +22,7 @@ public:
 class SocketErrorException : public exception {
 public:
 	virtual const char* what() const throw() {
-		return "Socket Error occured!";
+		return "Socket Error occurred!";
 	}
 };
 

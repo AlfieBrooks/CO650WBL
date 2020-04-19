@@ -1,4 +1,4 @@
-//Used to hide the localtime() deprecation warming
+//Used to hide the localtime() deprecation warning
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
